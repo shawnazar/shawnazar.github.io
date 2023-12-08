@@ -176,10 +176,10 @@ export default function Uses() {
           <Tool title="Displays">
             <ul role="list" className="space-y-3">
               <li className="overflow-hidden px-2 sm:rounded-md" key={0}>
-                4 x 32" UltraGear™ UHD 4K Nano IPS with ATW 1ms 144Hz HDR 1000 Monitor with G-SYNC® Compatible
+                4 x 32&quot; UltraGear™ UHD 4K Nano IPS with ATW 1ms 144Hz HDR 1000 Monitor with G-SYNC® Compatible
               </li>
               <li className="overflow-hidden px-2 sm:rounded-md" key={0}>
-                iPad Pro 9.7" (2106)
+                iPad Pro 9.7&quot; (2106)
               </li>
             </ul>
           </Tool>
