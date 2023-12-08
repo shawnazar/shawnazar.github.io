@@ -23,6 +23,13 @@ import image5 from '@/images/photos/image-5.jpg'
 import { type ArticleWithSlug, getAllArticles } from '@/lib/articles'
 import { formatDate } from '@/lib/formatDate'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faGithub,
+  faGitlab,
+  faLinkedin,
+} from '@fortawesome/free-brands-svg-icons'
+
 function MailIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
     <svg
@@ -105,7 +112,11 @@ function SocialLink({
 }) {
   return (
     <Link className="group -m-1 p-1" {...props}>
-      <Icon className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300" />
+      <FontAwesomeIcon
+        icon={Icon}
+        width={20}
+        className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300"
+      />
     </Link>
   )
 }
@@ -273,40 +284,60 @@ export default async function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Software designer, founder, and amateur astronaut.
+            I'm Shawn Azar. A father, adventurer, and a general technologist.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Spencer, a software designer and entrepreneur based in New York
-            City. I’m the founder and CEO of Planetaria, where we develop
-            technologies that empower regular people to explore space on their
-            own terms.
+            I am a CloudOps Engineering Manager at Bonusly with over 13 years of
+            experience in software engineering. I am passionate about solving
+            problems using technology and leveraging cloud computing. I thrive
+            on delivering high-quality, scalable, and secure solutions.
           </p>
+          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+            Findout more about me on my <Link href="/about" className='underline text-blue-600 hover:text-blue-800 visited:text-purple-600'>about page</Link> or
+            by following me on social media links below.
+          </p>
+
           <div className="mt-6 flex gap-6">
-            <SocialLink
-              href="https://twitter.com"
-              aria-label="Follow on Twitter"
-              icon={TwitterIcon}
-            />
-            <SocialLink
-              href="https://instagram.com"
-              aria-label="Follow on Instagram"
-              icon={InstagramIcon}
-            />
-            <SocialLink
-              href="https://github.com"
-              aria-label="Follow on GitHub"
-              icon={GitHubIcon}
-            />
-            <SocialLink
-              href="https://linkedin.com"
-              aria-label="Follow on LinkedIn"
-              icon={LinkedInIcon}
-            />
+            <Link
+              className="group -m-1 p-1"
+              href="https://www.linkedin.com/in/shawnazar/"
+              target="_new"
+            >
+              <FontAwesomeIcon
+                icon={faLinkedin}
+                width={20}
+                className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300"
+              />
+            </Link>
+
+            <Link
+              className="group -m-1 p-1"
+              href="https://github.com/shawnazar/"
+              target="_new"
+            >
+              <FontAwesomeIcon
+                icon={faGithub}
+                width={20}
+                className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300"
+              />
+            </Link>
+
+            <Link
+              className="group -m-1 p-1"
+              href="https://gitlab.com/cydiasa"
+              target="_new"
+            >
+              <FontAwesomeIcon
+                icon={faGitlab}
+                width={20}
+                className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300"
+              />
+            </Link>
           </div>
         </div>
       </Container>
       <Photos />
-      <Container className="mt-24 md:mt-28">
+      {/* <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
             {articles.map((article) => (
@@ -318,7 +349,7 @@ export default async function Home() {
             <Resume />
           </div>
         </div>
-      </Container>
+      </Container> */}
     </>
   )
 }
