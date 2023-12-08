@@ -25,6 +25,9 @@ async function importArticle(
   }
 }
 
+import { parse } from 'rss-to-json';
+
+
 export async function getAllArticles() {
   let articleFilenames = await glob('*/page.mdx', {
     cwd: './src/app/articles',
@@ -32,5 +35,15 @@ export async function getAllArticles() {
 
   let articles = await Promise.all(articleFilenames.map(importArticle))
 
-  return articles.sort((a, z) => +new Date(z.date) - +new Date(a.date))
+
+  var rss = await parse('https://medium.com/feed/@shawnazar');
+
+  // console.log();
+
+
+  // return articles.sort((a, z) => +new Date(z.date) - +new Date(a.date))
+  return rss;
 }
+
+
+// https://medium.com/feed/@shawnazar

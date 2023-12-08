@@ -176,10 +176,10 @@ export default function Uses() {
           <Tool title="Displays">
             <ul role="list" className="space-y-3">
               <li className="overflow-hidden px-2 sm:rounded-md" key={0}>
-                4 x 32" UltraGear™ UHD 4K Nano IPS with ATW 1ms 144Hz HDR 1000 Monitor with G-SYNC® Compatible
+                4 x 32&quot; UltraGear™ UHD 4K Nano IPS with ATW 1ms 144Hz HDR 1000 Monitor with G-SYNC® Compatible
               </li>
               <li className="overflow-hidden px-2 sm:rounded-md" key={0}>
-                iPad Pro 9.7" (2106)
+                iPad Pro 9.7&quot; (2106)
               </li>
             </ul>
           </Tool>
@@ -361,6 +361,19 @@ export default function Uses() {
                 Tunneled API Service for websites, Data Transmit Tool Gran
                 Turismo 7, Data Transmit Tool iRacing and
                 mariadb/mysql/postgresql databases
+              </li>
+            </ul>
+          </Tool>
+        </ToolsSection>
+
+        <ToolsSection title="Home Lab">
+          <Tool title="Modem">
+            <ul role="list" className="space-y-3">
+              <li className="overflow-hidden px-2 sm:rounded-md" key={0}>
+                Motorola MB8600
+              </li>
+              <li className="overflow-hidden px-2 sm:rounded-md" key={1}>
+                Xfinity Gigabit Internet Service (1.2Gbps Down / 40Mbps Up)
               </li>
             </ul>
           </Tool>
