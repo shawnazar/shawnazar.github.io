@@ -265,6 +265,19 @@ export default function Uses() {
             </ul>
           </Tool>
         </ToolsSection>
+
+        <ToolsSection title="Home Lab">
+          <Tool title="Modem">
+            <ul role="list" className="space-y-3">
+              <li className="overflow-hidden px-2 sm:rounded-md" key={0}>
+                Motorola MB8600
+              </li>
+              <li className="overflow-hidden px-2 sm:rounded-md" key={1}>
+                Xfinity Gigabit Internet Service (1.2Gbps Down / 40Mbps Up)
+              </li>
+            </ul>
+          </Tool>
+        </ToolsSection>
       </div>
     </SimpleLayout>
   )
