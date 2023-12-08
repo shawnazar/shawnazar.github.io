@@ -104,22 +104,22 @@ function Article({ article }: { article: ArticleWithSlug }) {
   )
 }
 
-function SocialLink({
-  icon: Icon,
-  ...props
-}: React.ComponentPropsWithoutRef<typeof Link> & {
-  icon: React.ComponentType<{ className?: string }>
-}) {
-  return (
-    <Link className="group -m-1 p-1" {...props}>
-      <FontAwesomeIcon
-        icon={Icon}
-        width={20}
-        className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300"
-      />
-    </Link>
-  )
-}
+// function SocialLink({
+//   icon: Icon,
+//   ...props
+// }: React.ComponentPropsWithoutRef<typeof Link> & {
+//   icon: React.ComponentType<{ className?: string }>
+// }) {
+//   return (
+//     <Link className="group -m-1 p-1" {...props}>
+//       <FontAwesomeIcon
+//         icon={Icon}
+//         width={20}
+//         className="h-6 w-6 fill-zinc-500 transition group-hover:fill-zinc-600 dark:fill-zinc-400 dark:group-hover:fill-zinc-300"
+//       />
+//     </Link>
+//   )
+// }
 
 function Newsletter() {
   return (
@@ -284,7 +284,7 @@ export default async function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            I'm Shawn Azar. A father, adventurer, and a general technologist.
+            I&apos;m Shawn Azar. A father, adventurer, and a general technologist.
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             I am a CloudOps Engineering Manager at Bonusly with over 13 years of

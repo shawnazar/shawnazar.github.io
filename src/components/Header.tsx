@@ -79,7 +79,7 @@ function MobileNavItem({
 }: {
   href: string
   children: React.ReactNode
-  target: string
+  target?: string
 }) {
   return (
     <li>
@@ -157,7 +157,7 @@ function NavItem({
 }: {
   href: string
   children: React.ReactNode
-  target: string
+  target?: string
 }) {
   let isActive = usePathname() === href
 

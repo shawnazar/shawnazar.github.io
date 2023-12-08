@@ -9,7 +9,7 @@ function NavLink({
 }: {
   href: string
   children: React.ReactNode
-  target: string
+  target?: string
 }) {
   return (
     <Link

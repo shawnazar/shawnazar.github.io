@@ -37,7 +37,7 @@ export default function About() {
         </div>
         <div className="lg:order-first lg:row-span-2">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            I'm Shawn Azar. A father, adventurer, and a general technologist.
+            I&apos;m Shawn Azar. A father, adventurer, and a general technologist.
           </h1>
           <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
             <p>
@@ -63,7 +63,7 @@ export default function About() {
               together with one click install on a managed platform feels cheap
               these days and while outsourcing some of these things makes sense,
               hosting a blog has gotten boring. I wanted to try something new,
-              so I'm building this website on an experimental stack I want to
+              so I&apos;m building this website on an experimental stack I want to
               learn and play with.
             </p>
             <p>Thank you for visiting my website!</p>

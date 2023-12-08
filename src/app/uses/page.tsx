@@ -81,7 +81,7 @@ export default function Uses() {
                 Platinum Silver exterior, Black interior
               </li>
               <li className="overflow-hidden px-2 sm:rounded-md" key={1}>
-                15.6", 3.5K 3456x2160, 60Hz, OLED, Touch, Anti-Reflect, 400 nit,
+                15.6&quot;, 3.5K 3456x2160, 60Hz, OLED, Touch, Anti-Reflect, 400 nit,
                 InfinityEdge
               </li>
               <li className="overflow-hidden px-2 sm:rounded-md" key={2}>
