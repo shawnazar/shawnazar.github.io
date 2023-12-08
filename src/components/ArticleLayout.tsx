@@ -52,11 +52,11 @@ export function ArticleLayout({
                 {article.title}
               </h1>
               <time
-                dateTime={article.date}
+                dateTime={article.title}
                 className="order-first flex items-center text-base text-zinc-400 dark:text-zinc-500"
               >
                 <span className="h-4 w-0.5 rounded-full bg-zinc-200 dark:bg-zinc-500" />
-                <span className="ml-3">{formatDate(article.date)}</span>
+                <span className="ml-3">{formatDate(article.title)}</span>
               </time>
             </header>
             <Prose className="mt-8" data-mdx-content>

@@ -1,49 +1,48 @@
 import glob from 'fast-glob'
+import { parse } from 'rss-to-json';
+import slugify from 'slugify';
 
 interface Article {
   title: string
-  description: string
-  author: string
-  date: string
+  // description: string
+  content: string
+  // author: string
+  // date: string
+  slug: string
 }
 
 export interface ArticleWithSlug extends Article {
   slug: string
 }
 
-async function importArticle(
-  articleFilename: string,
-): Promise<ArticleWithSlug> {
-  let { article } = (await import(`../app/articles/${articleFilename}`)) as {
-    default: React.ComponentType
-    article: Article
-  }
+// async function importArticle(
+//   articleFilename: string,
+// ): Promise<ArticleWithSlug> {
+//   let { article } = (await import(`../app/articles/${articleFilename}`)) as {
+//     default: React.ComponentType
+//     article: Article
+//   }
 
+//   return {
+//     slug: articleFilename.replace(/(\/page)?\.mdx$/, ''),
+//     ...article,
+//   }
+// }
+
+export async function importArticle(article: any): Promise<Article> {
   return {
-    slug: articleFilename.replace(/(\/page)?\.mdx$/, ''),
-    ...article,
+    slug: slugify(article.title, { lower: true }),
+    title: article.title,
+    content: article.content,
+    // date: new Date(article.pubDate),
+    // Add any other properties you need here
   }
 }
 
-import { parse } from 'rss-to-json';
 
 
 export async function getAllArticles() {
-  let articleFilenames = await glob('*/page.mdx', {
-    cwd: './src/app/articles',
-  })
-
-  let articles = await Promise.all(articleFilenames.map(importArticle))
-
-
-  var rss = await parse('https://medium.com/feed/@shawnazar');
-
-  // console.log();
-
-
-  // return articles.sort((a, z) => +new Date(z.date) - +new Date(a.date))
-  return rss;
+  var mediumArticles = await parse('https://medium.com/feed/@shawnazar');
+  let articles = await Promise.all(mediumArticles.items.map(importArticle))
+  return articles;
 }
-
-
-// https://medium.com/feed/@shawnazar

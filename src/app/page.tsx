@@ -95,10 +95,10 @@ function Article({ article }: { article: ArticleWithSlug }) {
       <Card.Title href={`/articles/${article.slug}`}>
         {article.title}
       </Card.Title>
-      <Card.Eyebrow as="time" dateTime={article.date} decorate>
-        {formatDate(article.date)}
+      <Card.Eyebrow as="time" dateTime={article.title} decorate>
+        {formatDate(article.title)}
       </Card.Eyebrow>
-      <Card.Description>{article.description}</Card.Description>
+      <Card.Description>{article.title}</Card.Description>
       <Card.Cta>Read article</Card.Cta>
     </Card>
   )
@@ -277,7 +277,7 @@ function Photos() {
 }
 
 export default async function Home() {
-  // let articles = (await getAllArticles()).slice(0, 4)
+  let articles = (await getAllArticles()).slice(0, 4)
 
   return (
     <>
@@ -337,7 +337,7 @@ export default async function Home() {
         </div>
       </Container>
       <Photos />
-      {/* <Container className="mt-24 md:mt-28">
+      <Container className="mt-24 md:mt-28">
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
             {articles.map((article) => (
@@ -349,7 +349,7 @@ export default async function Home() {
             <Resume />
           </div>
         </div>
-      </Container> */}
+      </Container>
     </>
   )
 }
