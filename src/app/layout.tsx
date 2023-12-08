@@ -1,18 +1,17 @@
 import { type Metadata } from 'next'
-import { Analytics } from '@vercel/analytics/react';
+import { Analytics } from '@vercel/analytics/react'
 
 import { Providers } from '@/app/providers'
 import { Layout } from '@/components/Layout'
 
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
   title: {
     template: '%s - Shawn Azar',
-    default:
-      'Shawn Azar - Software designer, founder, and amateur astronaut',
+    default: 'Shawn Azar - Software designer, founder, and amateur astronaut',
   },
   description:
     'I’m Shawn, a software designer and entrepreneur based in Denver. I’m the founder and CEO of Planetaria, where we develop technologies that empower regular people to explore space on their own terms.',
@@ -34,6 +33,7 @@ export default function RootLayout({
         <Providers>
           <div className="flex w-full">
             <Layout>{children}</Layout>
+            <SpeedInsights />
           </div>
           <Analytics />
         </Providers>
